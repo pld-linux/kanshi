@@ -1,13 +1,14 @@
 Summary:	Dynamic output configuration
 Name:		kanshi
-Version:	1.2.0
+Version:	1.3.0
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://git.sr.ht/~emersion/kanshi/archive/v%{version}.tar.gz
-# Source0-md5:	f59945af185d1a7b88065d91858560e5
+# Source0-md5:	496289478ed983ee15a4ad092935e617
 URL:		https://wayland.emersion.fr/kanshi/
-BuildRequires:	meson >= 0.47.0
+BuildRequires:	libvarlink-devel
+BuildRequires:	meson >= 0.59.0
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	scdoc >= 1.9.2
@@ -36,5 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %attr(755,root,root) %{_bindir}/kanshi
+%attr(755,root,root) %{_bindir}/kanshictl
 %{_mandir}/man1/kanshi.1*
+%{_mandir}/man1/kanshictl.1*
 %{_mandir}/man5/kanshi.5*
