@@ -1,19 +1,20 @@
 Summary:	Dynamic output configuration
 Name:		kanshi
-Version:	1.4.0
+Version:	1.5.0
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://git.sr.ht/~emersion/kanshi/archive/v%{version}.tar.gz
-# Source0-md5:	0a68330492cb9ffa045cc266bc052f28
+# Source0-md5:	7252cec39bb008bedb9bf456a9108147
 URL:		https://wayland.emersion.fr/kanshi/
+BuildRequires:	gcc >= 6:4.6
 BuildRequires:	libvarlink-devel
 BuildRequires:	meson >= 0.59.0
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	scdoc >= 1.9.2
-BuildRequires:	wayland-devel
+BuildRequires:	wayland-devel >= 1.14.91
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
