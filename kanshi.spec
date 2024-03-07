@@ -1,13 +1,14 @@
 Summary:	Dynamic output configuration
 Name:		kanshi
-Version:	1.5.1
+Version:	1.6.0
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://git.sr.ht/~emersion/kanshi/archive/v%{version}.tar.gz
-# Source0-md5:	f486a98e118524552cbfd54a45e91928
+# Source0-md5:	bbb32895fb2074bd7f122df7b046006d
 URL:		https://wayland.emersion.fr/kanshi/
 BuildRequires:	gcc >= 6:4.6
+BuildRequires:	libscfg-devel
 BuildRequires:	libvarlink-devel
 BuildRequires:	meson >= 0.59.0
 BuildRequires:	ninja
@@ -25,7 +26,9 @@ enabled and disabled on hotplug.
 %setup -q -n %{name}-v%{version}
 
 %build
-%meson build
+%meson build \
+	-Dwerror=false
+
 %ninja_build -C build
 
 %install
