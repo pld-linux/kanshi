@@ -1,11 +1,11 @@
 Summary:	Dynamic output configuration
 Name:		kanshi
-Version:	1.6.0
+Version:	1.7.0
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://git.sr.ht/~emersion/kanshi/archive/v%{version}.tar.gz
-# Source0-md5:	bbb32895fb2074bd7f122df7b046006d
+# Source0-md5:	445da754b3eaa73f28a20b50c6d80e3f
 URL:		https://wayland.emersion.fr/kanshi/
 BuildRequires:	gcc >= 6:4.6
 BuildRequires:	libscfg-devel
